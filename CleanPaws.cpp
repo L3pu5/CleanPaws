@@ -4,6 +4,11 @@
 #include <vector>
 #include <algorithm>
 
+//
+//  CleanPaws. 
+//      By L3pu5, L3pu5_Hare
+//
+
 //Expects two arguments, a string pointer to a file or a string itself and a directory to a word list.
 int main(int argc, char* argv[])
 {

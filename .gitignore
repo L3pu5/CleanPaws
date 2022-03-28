@@ -9,6 +9,7 @@
 
 #VsCode Task
 tasks.json
+.VsCode
 
 # Precompiled Headers
 *.gch

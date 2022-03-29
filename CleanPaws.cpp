@@ -70,7 +70,8 @@ int main(int argc, char* argv[])
             _lineNumber++;  
         }
     }
+    _input.close();
     printf("----------------------------------------------------------\n");
-    printf("%i lines were parsed. %i hits were identified.", _lineNumber, _hitCounter);
+    printf("%i lines were parsed. %i hits were identified.\n", _lineNumber, _hitCounter);
     return 0; 
 }

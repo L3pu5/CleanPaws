@@ -8,5 +8,4 @@ Usage: CleanPaws <TextFile> <WordList>
 
 Todo:
       Accept std::cin for easier piping or comparison against a string such as " echo "this is dummy text" | ./CleanPaws <WordList>.
-
-      Implement getopt()
+      Implement Exact Matches on Single words as opposed to string.find()

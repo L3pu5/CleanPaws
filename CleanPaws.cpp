@@ -3,15 +3,18 @@
 #include <string>
 #include <vector>
 #include <algorithm>
+#include "bOpts.h"
 
 //
 //  CleanPaws. 
+//      https://github.com/L3pu5/CleanPaws
 //      By L3pu5, L3pu5_Hare
 //
 
-//Expects two arguments, a string pointer to a file or a string itself and a directory to a word list.
+//Expects two arguments, a string pointer to a file and a directory to a word list.
 int main(int argc, char* argv[])
 {
+    bOpts::MakeOpts(argc, argv);
     //Handle incorrect arugment number.
     if(argc != 3){
         std::cout << "Usage: CleanPaws <TextFile> <WordList>\n";
@@ -19,6 +22,8 @@ int main(int argc, char* argv[])
         std::cout << "    WordList: The file containing one word per line to be checked against the main document.\n";
         return 1;
     }
+
+    
 
     //Open the files.
     std::ifstream _input;
@@ -38,14 +43,14 @@ int main(int argc, char* argv[])
     }
 
     //Open Input
-    _input.open(argv[1], std::ios::in);
+    _input.open(bOpts::GetFloatingOpt(0), std::ios::in);
 
     //Define Input vars
     int _lineNumber = 0;
     int _hitCounter = 0;
 
     printf("----------------------------------------------------------\n");
-    printf("Reading the file %s against %s\n", argv[1], argv[2]);
+    printf("Reading the file %s against %s\n", bOpts::GetFloatingOpt(0), bOpts::GetFloatingOpt(1));
     printf("----------------------------------------------------------\n");
     printf(" Line | Word       | Text\n");
 
